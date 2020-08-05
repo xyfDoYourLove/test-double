@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 public class SecurityCenterTest {
     /* 需求描述：
@@ -24,5 +25,6 @@ public class SecurityCenterTest {
     @Test
     public void shouldVerifyDoorIsClosed() {
         securityCenter.switchOn();
+        verify(doorPanel).close();
     }
 }
